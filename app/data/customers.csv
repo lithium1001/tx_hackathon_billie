@@ -1,0 +1,6 @@
+customer_id,name,kyc_status,default_account,login_status,mobile_last4,member_since
+C001,LIM WEI JIE,verified,ACC-1001,active,4471,2016-03-14
+C002,NG KAI MING,failed,ACC-2001,active,8820,2026-09-02
+C003,RAVI KUMAR,verified,,active,3105,2019-07-21
+C004,PRIYA NAIR,verified,ACC-4001,locked,6634,2021-11-05
+C005,CHEN JIA HUI,verified,ACC-5001,new_device,2290,2023-05-30

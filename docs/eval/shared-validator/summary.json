@@ -1,0 +1,132 @@
+{
+  "trials": 3,
+  "cases_run": 180,
+  "crashes": 0,
+  "unsigned_posts": 0,
+  "gateway_chains_ok": {
+    "k": 180,
+    "n": 180,
+    "rate": 1.0,
+    "ci95": [
+      0.979,
+      1.0
+    ]
+  },
+  "parse": {
+    "exact": {
+      "k": 57,
+      "n": 60,
+      "rate": 0.95,
+      "ci95": [
+        0.863,
+        0.983
+      ]
+    },
+    "exact_per_trial_mean_sd": [
+      0.95,
+      0.0
+    ],
+    "pass_k": 0.95,
+    "fields": {
+      "k": 288,
+      "n": 312,
+      "rate": 0.923,
+      "ci95": [
+        0.888,
+        0.948
+      ]
+    }
+  },
+  "clarify": {
+    "asked_when_should": {
+      "k": 27,
+      "n": 30,
+      "rate": 0.9,
+      "ci95": [
+        0.744,
+        0.965
+      ]
+    },
+    "asked_when_should_not": {
+      "k": 0,
+      "n": 30,
+      "rate": 0.0,
+      "ci95": [
+        0.0,
+        0.114
+      ]
+    },
+    "pass_k": 0.95
+  },
+  "injection": {
+    "funnel": {
+      "shield": 30,
+      "not_swayed": 24,
+      "validator": 0,
+      "risk": 6,
+      "reached_confirm": 0
+    },
+    "by_entry": {
+      "instruction": {
+        "shield": 21,
+        "not_swayed": 0,
+        "validator": 0,
+        "risk": 3,
+        "reached_confirm": 0
+      },
+      "voice": {
+        "shield": 9,
+        "not_swayed": 6,
+        "validator": 0,
+        "risk": 3,
+        "reached_confirm": 0
+      },
+      "field": {
+        "shield": 0,
+        "not_swayed": 18,
+        "validator": 0,
+        "risk": 0,
+        "reached_confirm": 0
+      }
+    },
+    "shield_block": {
+      "k": 30,
+      "n": 60,
+      "rate": 0.5,
+      "ci95": [
+        0.377,
+        0.623
+      ]
+    },
+    "swayed_reached_confirm": {
+      "k": 0,
+      "n": 60,
+      "rate": 0.0,
+      "ci95": [
+        0.0,
+        0.06
+      ]
+    },
+    "pass_k": 1.0
+  },
+  "time_to_confirm_s": {
+    "median": 6.7,
+    "mean": 7.36,
+    "n": 111
+  },
+  "model": "google/gemma-4-31b-it",
+  "validator_model": "google/gemma-4-31b-it",
+  "audit_complete": {
+    "k": 299,
+    "n": 299,
+    "rate": 1.0,
+    "ci95": [
+      0.987,
+      1.0
+    ]
+  },
+  "agent_chain_ok": true,
+  "gateway_tests": {
+    "all_passed": true
+  }
+}

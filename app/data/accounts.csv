@@ -1,0 +1,10 @@
+account_id,customer_id,nickname,type,last4,currency,balance,joint_holder
+ACC-1001,C001,Savings,savings,3301,SGD,62000.00,
+ACC-1002,C001,Everyday,current,7702,SGD,5200.00,
+ACC-1003,C001,Joint,savings,4419,SGD,8400.00,LIM SU YIN
+ACC-2001,C002,Savings,savings,9056,SGD,3000.00,
+ACC-3001,C003,Everyday,current,5518,SGD,1850.40,
+ACC-3002,C003,Savings,savings,6627,SGD,12300.00,
+ACC-4001,C004,Savings,savings,1184,SGD,8800.00,
+ACC-5001,C005,Everyday,current,0457,SGD,96.20,
+ACC-5002,C005,Savings,savings,7731,SGD,2400.00,

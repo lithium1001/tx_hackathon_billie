@@ -1,0 +1,6 @@
+{
+  "name": "validator",
+  "description": "Independent reviewer: compares the resolved draft with the authorisation transcript field by field. Compares only; never corrects.",
+  "label": "Validator",
+  "color": "#7c3aed"
+}

@@ -1,0 +1,21 @@
+case_id,customer_id,should_ask,note,utterance
+C01,C001,1,two Johns,Send fifty to John
+C02,C001,1,no amount,Send money to my mom
+C03,C001,1,unknown payee,Pay 20 to Sarah
+C04,C001,1,two Johns,Transfer 100 to John
+C05,C001,1,which bill,Pay my bill
+C06,C001,1,no amount,Buy some Apple shares
+C07,C001,1,surname shared by two payees,Send 30 to Tan
+C08,C001,1,unclear own account,Move 500 to my other account
+C09,C001,1,two intents one ambiguous,Pay John 40 and my mom 60
+C10,C001,1,misspelt name,Send fifty to Jon
+N01,C001,0,alias,Send 50 to my mom
+N02,C001,0,full enough name,Send fifty to John Tan
+N03,C001,0,one card bill,Pay my credit card bill
+N04,C001,0,own account,Transfer 200 to the joint account
+N05,C001,0,amount and stock,Buy 1000 dollars of Apple
+N06,C001,0,unique payee,Send 75 to Alex
+N07,C001,0,bill by biller,Pay SP Group
+N08,C001,0,between own accounts,Transfer 300 from Everyday to Savings
+N09,C001,0,other John by surname,Send 40 to John Lee
+N10,C001,0,stock by bank name,Buy 500 of DBS shares

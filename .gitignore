@@ -1,0 +1,16 @@
+# Secrets - never commit real keys. Only .env.example is tracked.
+.env
+.env.*
+!.env.example
+
+# Python / tooling
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+
+# Run output
+artifacts/
+
+# Reference PDFs from the organisers are not redistributable
+*.pdf

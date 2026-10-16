@@ -1,0 +1,45 @@
+# DCTA - dependencies for both processes (agent + gateway). Versions are PINNED
+# (==) so installs are reproducible and a surprise upstream bump cannot break a
+# demo. No database: state lives in memory and in append-only files.
+#
+# Keep this file ASCII-only: pip decodes it with the system codepage, and on a
+# GBK (CP936) Windows console a single non-ASCII character aborts the install.
+#
+# Two groups: the direct imports, plus the transitive packages in the
+# langchain/pydantic stacks that most often cause version-incompatibility pain -
+# pinned explicitly so a loose resolver cannot drift them.
+
+# --- web server ---------------------------------------------------------------
+fastapi==0.136.3
+uvicorn[standard]==0.48.0
+starlette==1.2.1
+pydantic==2.12.5
+pydantic-core==2.41.5
+typing-extensions==4.15.0
+
+# --- agent / LLM stack --------------------------------------------------------
+langchain-core==1.4.0
+langchain-openai==1.2.2
+langgraph==1.2.4
+langgraph-checkpoint==4.1.1
+langgraph-prebuilt==1.1.0
+langgraph-sdk==0.4.2
+langsmith==0.8.9
+openai==2.26.0
+tiktoken==0.13.0
+tenacity==8.2.3
+httpx==0.28.1
+
+# --- data / misc --------------------------------------------------------------
+# numpy MUST stay <2: pandas 2.1.1's C extensions are compiled against the
+# numpy 1.x ABI, and importing it under numpy 2.x fails with a binary
+# incompatibility error.
+numpy==1.26.4
+pandas==2.1.1
+python-dotenv==1.2.2
+
+# --- signatures (gateway verification, simulated device in eval) --------------
+cryptography==50.0.2
+
+# --- tests --------------------------------------------------------------------
+pytest==9.1.1

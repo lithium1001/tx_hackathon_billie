@@ -1,0 +1,6 @@
+{
+  "name": "parser",
+  "description": "Extracts the transactions a customer asked for into a ParsedIntent JSON draft. Extracts only: never computes, never executes.",
+  "label": "Parser",
+  "color": "#2563eb"
+}

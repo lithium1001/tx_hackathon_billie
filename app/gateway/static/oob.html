@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'unsafe-inline'">
+<title>Out-of-band confirmation</title>
+<style>
+  :root { --ink:#14171A; --soft:#5B6470; --bg:#F3F4F6; --panel:#fff; --line:#E3E5E8; --warn:#B45309; }
+  body { margin:0; padding:24px 16px; background:var(--bg); color:var(--ink);
+         font:15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width:520px; margin:0 auto; }
+  h1 { font-size:20px; margin:0 0 4px; }
+  p.note { color:var(--soft); margin:0 0 20px; }
+  .card { background:var(--panel); border:1px solid var(--line); border-radius:10px;
+          padding:16px; margin-bottom:12px; }
+  .otp { font:600 32px/1.2 ui-monospace, monospace; letter-spacing:.15em; color:var(--warn); }
+  .meta { color:var(--soft); font-size:13px; }
+  ul { margin:8px 0 0; padding-left:18px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Out-of-band confirmation</h1>
+  <p class="note">Mock of a hardware token or RM call-back. Codes never pass through the chat assistant.</p>
+  <div id="list"><p class="meta">No payments are waiting for a code.</p></div>
+</main>
+<script src="/oob.js"></script>
+</body>
+</html>

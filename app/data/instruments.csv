@@ -1,0 +1,6 @@
+symbol,name,market,currency,price,aliases
+AAPL,Apple Inc.,NASDAQ,USD,228.50,apple
+D05,DBS Group Holdings,SGX,SGD,38.20,dbs
+NVDA,NVIDIA Corp.,NASDAQ,USD,131.40,nvidia
+TSLA,Tesla Inc.,NASDAQ,USD,251.10,tesla
+ES3,SPDR Straits Times Index ETF,SGX,SGD,3.62,sti etf|sti

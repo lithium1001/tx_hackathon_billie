@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Billie · Bank</title>
+  <link rel="icon" href="data:," />
+  <link rel="stylesheet" href="/styles.css?v=1" />
+</head>
+<body>
+  <!-- ── Demo bar: for the presenter, not part of the customer app ─────────── -->
+  <header class="demobar">
+    <div class="db-brand"><span class="db-dot"></span>Billie · live demo</div>
+    <label class="db-field">
+      <span class="db-label">Persona</span>
+      <select id="personaSel" class="db-select"></select>
+    </label>
+    <div class="db-blurb" id="personaBlurb"></div>
+    <label class="db-field">
+      <span class="db-label">Try saying</span>
+      <select id="exampleSel" class="db-select db-wide"></select>
+    </label>
+    <div class="db-actions">
+      <button class="db-btn" id="inboxBtn" aria-haspopup="true" aria-expanded="false">
+        📱 Other device <span class="db-badge" id="inboxBadge" hidden>0</span>
+      </button>
+      <a class="db-btn" id="oobLink" target="_blank" rel="noopener">OOB page ↗</a>
+      <button class="db-btn" id="resetBtn" title="Clear the conversation">Reset chat</button>
+      <button class="db-btn" id="resetLoginBtn" title="Unlock wrong PINs and forget the confirmed device">Reset sign-in</button>
+      <button class="db-btn danger" id="tamperBtn" hidden>Tamper audit</button>
+    </div>
+    <section class="inbox" id="inbox" hidden aria-label="Customer's other device"></section>
+  </header>
+
+  <div class="layout">
+    <!-- ── Online banking: the customer's accounts, activity, payees ─────────── -->
+    <main class="bank" id="bank" aria-label="Online banking"></main>
+
+    <!-- ── The customer's phone: the assistant ─────────────────────────────── -->
+    <div class="stage">
+      <div class="phone">
+        <div class="statusbar"><span>9:41</span><span class="sb-icons">●●●● ᯤ ▮</span></div>
+
+        <section class="login" id="loginView"></section>
+
+        <section class="chatview" id="chatView" hidden>
+          <header class="app-top">
+            <div class="app-avatar" aria-hidden="true">B</div>
+            <div class="app-title">
+              <div class="app-name">Billie <span class="app-role">payment assistant</span></div>
+              <div class="app-sub" id="secureLine">🔒 Secure session</div>
+            </div>
+            <button class="app-logout" id="logoutBtn" aria-label="Sign out" title="Sign out">⏻</button>
+          </header>
+          <div class="kyc-banner" id="kycBanner" hidden role="status"></div>
+          <div class="chat" id="chat" aria-live="polite"></div>
+          <div class="chips" id="chips"></div>
+          <div class="composer">
+            <div class="composer-row">
+              <textarea class="input" id="input" rows="1" placeholder="Type, or hold 🎙 to speak…"></textarea>
+              <button class="btn btn-mic" id="micBtn" aria-label="Hold to speak" hidden>🎙</button>
+              <button class="btn btn-send" id="sendBtn" aria-label="Send">↑</button>
+            </div>
+            <div class="composer-note">You approve every payment on this device before any money moves.</div>
+          </div>
+        </section>
+
+        <div class="sheet-backdrop" id="sheetBackdrop" hidden></div>
+        <section class="sheet" id="sheet" role="dialog" aria-modal="true"
+                 aria-labelledby="sheetTitle" tabindex="-1" hidden></section>
+      </div>
+    </div>
+
+    <!-- ── Trace & audit: for engineers and auditors (collapsible) ─────────── -->
+    <aside class="trace" id="trace">
+      <button class="trace-rail" id="traceExpand" aria-label="Show trace and audit">
+        <span class="tr-icon">⟨</span><span class="tr-text">Trace &amp; audit</span>
+        <span class="tr-dot" id="traceDot" hidden></span>
+      </button>
+      <div class="trace-body">
+        <header class="trace-head">
+          <div>
+            <div class="th-title">Trace &amp; audit</div>
+            <div class="th-session" id="sessionLine">No session</div>
+          </div>
+          <button class="th-collapse" id="traceCollapse" aria-label="Hide trace and audit" title="Hide">⟩</button>
+        </header>
+        <nav class="tabs" role="tablist">
+          <button class="tab active" id="tabGraph" role="tab">Execution graph</button>
+          <button class="tab" id="tabChain" role="tab">Audit chain</button>
+        </nav>
+        <div class="pane-body" id="graphBody"></div>
+        <div class="pane-body" id="chainBody" hidden></div>
+      </div>
+    </aside>
+  </div>
+
+  <script src="/ui.js?v=1"></script>
+  <script src="/device.js?v=1"></script>
+  <script src="/confirm.js?v=1"></script>
+  <script src="/voice.js?v=1"></script>
+  <script src="/bank.js?v=1"></script>
+  <script src="/login.js?v=1"></script>
+  <script src="/trace.js?v=1"></script>
+  <script src="/inbox.js?v=1"></script>
+  <script src="/app.js?v=1"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+case_id,customer_id,channel,note,utterance,expected
+P01,C001,text,brief example 1 (remainder),Transfer 500 dollars to my mom and use the rest to buy Apple shares,transfer:PAY-0003:500.00:ACC-1001|buy_security:AAPL:61500.00:ACC-1001
+P02,C001,text,brief example 2 (a grand + fraction),"Move a grand to the joint account, then use half of it to buy DBS shares",transfer:ACC-1003:1000.00:ACC-1001|buy_security:D05:500.00:ACC-1001
+P03,C001,text,single,Send 50 to my mom,transfer:PAY-0003:50.00:ACC-1001
+P04,C001,text,bill in full,Pay my credit card bill,bill_payment:BILL-0001:1284.50:ACC-1001
+P05,C001,text,named source,Pay the SP Group bill from Everyday,bill_payment:BILL-0002:186.40:ACC-1002
+P06,C001,text,shorthand 2k,Buy 2k of Nvidia,buy_security:NVDA:2000.00:ACC-1001
+P07,C001,text,word number,Send fifty bucks to John Tan,transfer:PAY-0001:50.00:ACC-1001
+P08,C001,text,own accounts,Transfer 300 from Everyday to my joint account,transfer:ACC-1003:300.00:ACC-1002
+P09,C001,text,ETF by common name,Put five hundred into the STI ETF,buy_security:ES3:500.00:ACC-1001
+P10,C001,text,two intents,Pay mum 120 and pay the SP Group bill,transfer:PAY-0003:120.00:ACC-1001|bill_payment:BILL-0002:186.40:ACC-1001
+P11,C001,text,2 grand + quarter,Send 2 grand from Savings to the joint account and buy Tesla with a quarter of it,transfer:ACC-1003:2000.00:ACC-1001|buy_security:TSLA:500.00:ACC-1001
+P12,C001,text,1.5k between own accounts,Transfer 1.5k from Everyday to Savings,transfer:ACC-1001:1500.00:ACC-1002
+P13,C001,text,alias mother,Give my mother 80 dollars,transfer:PAY-0003:80.00:ACC-1001
+P14,C001,text,card by brand,Use Everyday to pay off my Visa card,bill_payment:BILL-0001:1284.50:ACC-1002
+P15,C001,text,remainder after own transfer,"Move 200 to Everyday, then put the rest of my savings into DBS",transfer:ACC-1002:200.00:ACC-1001|buy_security:D05:61800.00:ACC-1001
+P16,C001,voice,ASR: mum / by,transfer five hundred dollars to my mum and use the rest to by apple shares,transfer:PAY-0003:500.00:ACC-1001|buy_security:AAPL:61500.00:ACC-1001
+P17,C001,voice,ASR: lower case full name,send fifty to john tan wei ming,transfer:PAY-0001:50.00:ACC-1001
+P18,C001,voice,ASR: joint a count,move a grand to the joint a count,transfer:ACC-1003:1000.00:ACC-1001
+P19,C001,voice,ASR: filler words,um pay my credit card bill please,bill_payment:BILL-0001:1284.50:ACC-1001
+P20,C001,text,hundred and twenty,Send a hundred and twenty to Alex,transfer:PAY-0004:120.00:ACC-1001
