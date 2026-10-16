@@ -79,6 +79,13 @@ py -m pip install -r requirements.txt
 copy .env.example .env                      # macOS / Linux: cp .env.example .env
 ```
 
+If PowerShell refuses to run `activate` ("running scripts is disabled on this system"), allow scripts for the current window only, then activate again:
+
+```powershell
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+.venv\Scripts\activate
+```
+
 `app/.env` is the one place the app is configured. It holds secrets and is gitignored, so never commit it. Nothing else is needed on a fresh clone: the data is synthetic CSV files under `app/data/`, and there is no database.
 
 ### Configuration
