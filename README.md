@@ -2,6 +2,8 @@
 
 **One sentence to Billie, one tap to approve.** · Banking track · Scenario 1: Voice-Enabled Payment and Transaction
 
+▶ **Demo video:** [watch on Google Drive](https://drive.google.com/file/d/1zOyf-Uok6s3D39ZfEGow8OPoX4W1mUxc/view?usp=sharing). It covers the overview, a live walkthrough and the results.
+
 A conversational payment assistant for retail banking customers in Singapore. A customer says or types one sentence, such as *"Transfer 500 dollars to my mom and use the rest to buy Apple shares"*. A LangGraph agent turns it into a draft of linked transactions and asks a short question with options when something is unclear. The customer then approves the draft on their own phone. FastAPI serves both the agent and a separate bank gateway; the front end is plain JavaScript.
 
 The language model writes drafts and questions, and nothing else. Every amount ("the rest", "half of it") is computed by deterministic code. An independent validator, run as a second LLM call plus code re-checks, freezes any draft that does not match what the customer said. Money moves only when the customer's device signs the exact bytes shown on the review screen with a non-exportable P-256 key. The gateway has no model: it checks the signature, KYC and eight risk rules before it posts anything. Every step is recorded in two linked hash chains.
